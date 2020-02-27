@@ -4,10 +4,10 @@ const Engineer = require("./lib/Engineer");
 const Intern = require("./lib/Intern");
 const fs = require("fs");
 
-const engineerHtml = require("./template/engineer");
-const mainHtml = require("./template/main");
-const internHtml = require("./template/intern");
-const managerHtml = require("./template/manager");
+const engineerHtml = require("./templates/engineer");
+const mainHtml = require("./templates/main");
+const internHtml = require("./templates/intern");
+const managerHtml = require("./templates/manager");
 
 
 console.log("Please answer the prompts to build your engineering team");
@@ -45,33 +45,33 @@ const makeManager = async () => {
         {
             type: "input",
             name: "name",
-            message: "What is the Managers's name?"
+            message: "Managers's name?"
           },
           {
             type: "input",
             name: "id",
-            message: "What is the employee ID?"
+            message: "Employee ID?"
           },
           {
             type: "input",
             name: "email",
-            message: "What is your manager's email?"
+            message: "Email?"
           },
           {
             type: "input",
             name: "number",
-            message: "What is your manager's office number?"
+            message: "Office number?"
           },
           {
             type: 'confirm',
             name: 'engineer',
-            message: 'Do you have any engineers on the team? ',
+            message: 'Any engineers on the team? ',
             default: true
           },
           {
             type: 'confirm',
             name: 'interns',
-            message: 'Do you have any interns on the team? ',
+            message: 'Any interns on the team? ',
             default: true
           },
     ];
@@ -85,17 +85,17 @@ const createEngTeam = async (inputs = []) => {
         {
             type: "input",
             name: "name",
-            message: "What is the Engineer team member's name?"
+            message: "Engineer's team member's name?"
           },
           {
               type: "input",
-              message: "What is their github?",
+              message: "Github?",
               name: "github",
           },
           {
             type: "input",
             name: "id",
-            message: "What is the employee ID?"
+            message: "Employee ID?"
           },
           {
             type: "input",
@@ -105,7 +105,7 @@ const createEngTeam = async (inputs = []) => {
           {
             type: 'confirm',
             name: 'again',
-            message: 'Do you have any more engineers? ',
+            message: 'Any more engineers? ',
             default: true
           }
 
@@ -122,27 +122,27 @@ const createInternHtml = async (inputs = []) => {
         {
             type: "input",
             name: "name",
-            message: "What is the intern team member's name?"
+            message: "The intern team member's name?"
           },
           {
               type: "input",
-              message: "What school did they go to?",
+              message: "School they went to?",
               name: "school",
           },
           {
             type: "input",
             name: "id",
-            message: "What is the employee ID?"
+            message: "Employee ID?"
           },
           {
             type: "input",
             name: "email",
-            message: "What is their email?"
+            message: "Email?"
           },
           {
             type: 'confirm',
             name: 'again',
-            message: 'Do you have any more Interns? ',
+            message: 'Any more Interns? ',
             default: true
           }
 
@@ -190,6 +190,6 @@ createTeamHtml = function(data){
 const writeFiles = (data) => {
     fs.writeFile('./output/index.html', data, (err) => {
         if (err) throw err;
-        console.log('The file has been saved!');
+        console.log('Saved Yo!!!');
 });
 }
