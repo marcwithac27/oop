@@ -9,9 +9,6 @@ const mainHtml = require("./templates/main");
 const internHtml = require("./templates/intern");
 const managerHtml = require("./templates/manager");
 
-
-console.log("Please answer the prompts to build your engineering team");
-
 const init = async () => {
     const mgrInfo = await makeManager();
     if (mgrInfo.engineer == false && mgrInfo.interns == false){
@@ -39,7 +36,6 @@ const init = async () => {
         writeFiles(finalHtml);
     }
   };
-
 const makeManager = async () => {
     const prompts = [
         {
@@ -79,6 +75,7 @@ const makeManager = async () => {
     return answers;
 }
 
+
 const createEngTeam = async (inputs = []) => {
 
     const prompts = [
@@ -115,7 +112,6 @@ const createEngTeam = async (inputs = []) => {
 
     return again ? createEngTeam(newInputs) : newInputs;
 }
-
 const createInternHtml = async (inputs = []) => {
 
     const prompts = [
@@ -181,7 +177,6 @@ const cards = async (man, eng, int) => {
 
     return teamHtml;
 } 
-
 
 createTeamHtml = function(data){
     return mainHtml.generateHTML(data);    
