@@ -2,11 +2,11 @@ exports.generateHTML = function(data) {
     return `<div class="card float-left bg-success" style="width: 18rem;">    
     <div class="card-body">
       <h2 class="card-title">${data.name}</h5>
-      <h5 class="card-text"><i class="fad fa-glasses">${data.getRole()}</i> </h5>
+      <h5 class="card-text"><i class="fal fa-transgender-alt">${data.getRole()}</i></h5>
     </div>
     <ul class="list-group list-group-flush">
-      <li class="list-group-item">ID: ${data.id} </li>
-      <li class="list-group-item">Email: ${data.email} </li>
-      <li class="list-group-item">School: ${data.getSchool()} </li>
+      <li class="list-group-item text-info">ID: ${data.id} </li>
+      <li class="list-group-item text-info">Email: ${data.email} </li>
+      <li class="list-group-item text-info">School: ${data.getSchool()} </li>
     </ul>
 </div>`}

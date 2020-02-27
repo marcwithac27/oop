@@ -5,8 +5,9 @@ exports.generateHTML = function(data) {
       <h5 class="card-text"><i class="fab fa-wpbeginner">${data.getRole()}</i> </h5>
     </div>
     <ul class="list-group list-group-flush">
-      <li class="list-group-item">ID: ${data.id} </li>
-      <li class="list-group-item">Email: ${data.email} </li>
-      <li class="list-group-item"><a href="${data.getGithub()}">Github</a></li>
+      <li class="list-group-item text-info">ID: ${data.id} </li>
+      <li class="list-group-item text-info">Email: ${data.email} </li>
+      <li class="list-group-item text-info"><a href="
+      https://github.com/${data.getGithub()}">Github</a></li>
     </ul>
 </div>`}

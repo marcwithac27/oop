@@ -17,7 +17,7 @@ exports.generateHTML = function(data) {
     </head>
     <body>
       <header>
-        <h1>My Team</h1>
+        <h1>The Squad</h1>
       </header>
       ${data}
     </body>

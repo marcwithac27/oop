@@ -5,8 +5,8 @@ exports.generateHTML = function(data) {
       <h5 class="card-text"><i class="fas fa-mug-marshmallows">${data.getRole()}</i></h5>
     </div>
     <ul class="list-group list-group-flush">
-      <li class="list-group-item">ID: ${data.id} </li>
-      <li class="list-group-item">Email: ${data.email} </li>
-      <li class="list-group-item">Office: ${data.getOfficeNumber()} </li>
+      <li class="list-group-item text-info">ID: ${data.id} </li>
+      <li class="list-group-item text-info">Email: ${data.email} </li>
+      <li class="list-group-item text-info">Office: ${data.getOfficeNumber()} </li>
     </ul>
 </div>`}
